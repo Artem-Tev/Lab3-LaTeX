@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\include{dependecies}
+\author{Автор: Тевелев Артём Дмитриевич (М3111)}
+\title{Работа с \LaTeX. Лабораторная работа \textnumero 3}
+\date{\today}
+\graphicspath{{images}}
+
+\begin{document}
+
+\maketitle
+\begin{center}
+    {Преподаватель: Жуйков Артём Сергеевич}
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Общее описание библиотеки geometric\_lib}
+
+Библиотека предоставляет функции для вычисления площадей и периметров основных геометрических фигур: кругов, квадратов и прямоугольников. Для каждой фигуры представлены две функции — для вычисления площади и периметра.
+
+\section{Программа 1: Круг}
+
+\subsection{Исходный код программы}
+
+\begin{minted}[linenos, frame=single]{python}
+import math
+
+def area(r):
+    return math.pi * r * r
+
+def perimeter(r):
+    return 2 * math.pi * r
+\end{minted}
+
+\subsection{Описание логики программы}
+
+1. Функция `area(r)` — вычисляет площадь круга:
+   \[
+   S = \pi R^2
+   \]
+   где \( R \) — радиус круга.
+
+2. Функция `perimeter(r)` — вычисляет периметр (длину окружности):
+   \[
+   P = 2\pi R
+   \]
+   где \( R \) — радиус круга.
+
+\subsection{Пример использования}
+
+\begin{equation}
+\text{area}(5) = 25 \cdot \pi \quad (\approx 78.54)
+\end{equation}
+\begin{equation}
+\text{perimeter}(5) = 10 \cdot \pi \quad (\approx 31.42)
+\end{equation}
+
+\section{Программа 2: Квадрат}
+
+\subsection{Исходный код программы}
+
+\begin{minted}[linenos, frame=single]{python}
+def area(a):
+    return a * a
+
+def perimeter(a):
+    return 4 * a
+\end{minted}
+
+\subsection{Описание логики программы}
+
+1. Функция `area(a)` — вычисляет площадь квадрата:
+   \[
+   S = a^2
+   \]
+   где \( a \) — длина стороны квадрата.
+
+2. Функция `perimeter(a)` — вычисляет периметр квадрата:
+   \[
+   P = 4a
+   \]
+   где \( a \) — длина стороны квадрата.
+
+\subsection{Пример использования}
+
+\begin{verbatim}
+area(4) = 4 * 4 = 16
+perimeter(4) = 4 * 4 = 16
+\end{verbatim}
+
+\section{Программа 3: Прямоугольник}
+\subsection{Исходный код программы}
+
+\begin{minted}[linenos, frame=single]{python}
+def area(a, b):
+    return a * b
+
+def perimeter(a, b):
+    return 2 * a + 2 * b
+\end{minted}
+
+\subsection{Описание логики программы}
+
+1. Функция `area(a, b)` — вычисляет площадь прямоугольника:
+   \[
+   S = a \times b
+   \]
+   где \( a \) и \( b \) — длины сторон прямоугольника.
+
+2. Функция `perimeter(a, b)` — вычисляет периметр прямоугольника:
+   \[
+   P = 2a + 2b
+   \]
+   где \( a \) и \( b \) — длины сторон прямоугольника.
+
+\subsection{Пример использования}
+
+\begin{verbatim}
+area(3, 6) = 3 * 6 = 18
+perimeter(3, 6) = 2 * 3 + 2 * 6 = 18
+\end{verbatim}
+Ссылка на GitHub проект: \href{https://github.com/Artem-Tev/Lab3-LaTeX}{Лабораторная на Github}
+\end{document}
+
+
+
